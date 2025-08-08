@@ -1,0 +1,173 @@
+----------------recall-----------------
+select * from company_dim
+limit(5) ; --untuk call data hanya representatif--
+
+select * from job_postings_fact;
+
+/*Analisis data eksplorasi*/
+--apakah ada data duplicate?--
+select job_title, count(*) as jenis_job
+from job_postings_fact group by job_title
+having count(*)>1;
+
+--karna ada duplicate data at job_title table so we have to remove them--
+select distinct job_title from job_postings_fact;
+
+/* kita pengen jumlah jenis job yg ada, dengan mengecualikan duplicate value*/
+select count(distinct job_title) from job_postings_fact;
+--ada 15575 jobs--
+
+--order by--
+--kita pengen tau ada negara apa aja tapi urutkan berdasarkan A-Z--
+select distinct job_country from job_postings_fact order by job_country asc ;
+
+--COMPARISONS--
+/*  AND > untuk memanggil kategori dengan nilai TRUE semua 
+    OR > untuk memanggil kategori dengan kondisi salah satu nilai TRUE
+    IN > untuk memanggil kategori yang valuenya hanya ada di basisdata
+    BETWEEN > untuk memanggil nilai yang berada di rentang nilai itu */
+--soal 1--
+select salary_hour_avg, job_title
+from job_postings_fact 
+where salary_hour_avg > '25'; --ada 8784 pekerja yg memiliki salary/jam > $25--
+
+--soal 2--
+--cari job_title_short yang memiliki status employee 'full time'--
+select job_title_short, job_location, job_schedule_type from job_postings_fact
+where job_schedule_type = 'Full-time'; --full-time hanya ada 25897 location--
+
+--soal 3--
+select*from skills_dim;
+select skills, type
+from skills_dim where type='programming';
+
+--soal 4--
+--ambil job_title yang salary year avg > 100.000 dan berasal dari 'United States' dan diurutkan dari yang terkecil--
+select*from job_postings_fact;
+select job_title, salary_year_avg, job_country from job_postings_fact 
+where salary_year_avg > 100000 and job_country = 'United States'
+order by salary_year_avg asc;
+
+--soal 5--
+--ambil job title yang tidak dari negara United State--
+select job_title, job_country from job_postings_fact
+where not job_country='United State';
+
+--soal 6--
+--tampilkan gaji masing-masing job_title_short dengan rintang nilai 500rb dan 1jt--
+select *from job_postings_fact;
+select job_title_short, salary_year_avg from job_postings_fact
+where salary_year_avg between 500000 and 1000000
+order by salary_year_avg desc;
+
+--soal 7--
+--cari pekerjaan yang terdapat kata "Analyst"--
+select*from job_postings_fact;
+select distinct job_title_short from job_postings_fact where job_title_short like '%Analyst%';
+
+--soal 8--
+--tampilkan pekerjaan yang gajinya antara 500rb, 1jt, dan lebih dari 1jt--
+select job_title_short, salary_year_avg from job_postings_fact
+where salary_year_avg>=500000 or salary_year_avg<=1000000
+order by salary_year_avg asc;
+
+--disini mau tahu ada pekerja brpa yang memiliki gaji pertahun >=500rb dan <=1jt--
+select salary_year_avg, count(*) as jumlah_pekerjaan from job_postings_fact
+where salary_year_avg>=500000 or salary_year_avg<=1000000
+group by salary_year_avg;
+
+--soal 8--
+--tampilkan semua produk  yang bukan 'Data analyst' 'Business Analyst' dan 'Senior Data Analyst'--
+--kondisi query di bawah ini untuk seleksi data yang mengandung kata2 tersebut--
+select distinct job_title_short from job_postings_fact
+where job_title_short NOT LIKE  "Data Analyst" and
+      job_title_short NOT LIKE  "Business Analyst" and
+      job_title_short NOT LIKE  "Senior Data Analyst" ;
+
+--kalau masih mengandung pake ini--
+select job_title_short from job_postings_fact
+where job_title_short not in ('Data Analyst', 'Business Analyst', 'Senior Data Analyst');
+
+--soal 9--
+select * from job_postings_fact
+where salary_year_avg<50000 and salary_year_avg>500000;
+
+--soal 10--
+--tampilkan gaji yang gajinya diatas rata2 yaitu=123.326--
+select avg(salary_year_avg)as new_value from job_postings_fact;
+pragma table_info(job_postings_fact); --memanggil seluruh tabel di database--
+select job_title_short,
+job_title,
+job_location,
+job_via,
+job_schedule_type,
+job_work_from_home,
+search_location,
+job_posted_date,
+job_no_degree_mention,
+job_health_insurance,
+job_country,
+salary_rate,
+salary_year_avg,
+salary_hour_avg from job_postings_fact
+where salary_year_avg > (select avg(salary_year_avg) from job_postings_fact);
+
+--soal 11--
+--cari job yang gajinya lebih besar dari data analyst--
+--coret2an--
+select salary_year_avg from job_postings_fact order by salary_year_avg desc; --96rb--
+select avg(salary_year_avg) from job_postings_fact where job_title_short='Data Analyst'; --93rb--
+--jawab--
+select job_title_short, salary_year_avg from job_postings_fact
+where salary_year_avg > (select avg(salary_year_avg) from job_postings_fact where job_title_short='Data Analyst');
+
+--soal 12--
+--cari job yang tidak menyediakan asuransi kesehatan--
+select*from job_postings_fact;
+--0=tidak punya, 1=punya--
+select distinct job_title_short from job_postings_fact
+where not job_health_insurance = 1;
+
+--soal 13--
+--cari jenis pekerjaan yang pernah dimention berdasarkan tabel job_postings_fact--
+select distinct job_title from job_postings_fact
+where job_no_degree_mention = 1;
+
+-----------operation dan agregat-----------
+--soal 1--
+--coba hitung dalam sehari pekerjaan ini dapet berapa dollar--
+select * from job_postings_fact;
+select job_title, (salary_hour_avg * 8) as gaji_sehari from job_postings_fact
+where salary_hour_avg is not null order by salary_hour_avg desc;
+
+--soal 2 --
+--misalkan gaji yang under 500 dikasih kesempatan lembur [10% dari gaji] pekerjaan apa yg paling banyak--
+select job_title_short, (salary_hour_avg * 8 + 0.1) as gaji_lembur from job_postings_fact
+where salary_hour_avg < 500;
+
+--soal 3--
+--mau melihat gaji tertinggi dan terendah berdasarkan jenis pekerjaan--
+select job_title_short, salary_year_avg from job_postings_fact
+where salary_year_avg = (select max(salary_year_avg) from job_postings_fact) or 
+      salary_year_avg = (select min(salary_year_avg) from job_postings_fact);
+ 
+--soal 4--
+--hitung selisih dari gaji tertinggi dan terendah--
+select (max(salary_year_avg)-min(salary_year_avg)) as selisih
+from job_postings_fact;
+
+--soal 5--
+--menampilkan data pekerjaan  yang diposting lebih dari 1 tahun sejak sekarang--
+select*from job_postings_fact;
+select job_title_short, job_via from job_postings_fact
+where date(job_posted_date) < date('now', '-365 days'); -- DATE=mengubah time ke bentuk tanggal aja tanpa include jam,menit, dan detik--
+/* date(job_posted_date) < date('now', '-365 days')
+bacanya: data yang ditampilkan adalah data yg ada sebelum 365 days sejak hari ini misal 24/07/2025 */
+
+--soal 6--
+--hitung udah berapa lama sejak info loker itu diposting hingga sekarang--
+select job_title_short, job_posted_date,
+           CAST ((strftime('%y', 'now') - strftime('%y', date(job_posted_date))) as integer) -
+           (strftime('%m-%d', 'now') < strftime('%m-%d', date(job_posted_date))) as waktu_posting from job_postings_fact;
+           
+select job_posted_date, strftime('%y', job_posted_date) as tahun from job_postings_fact; --Tahunnya NULL brarti format datenya salah ga sesuai basis--
