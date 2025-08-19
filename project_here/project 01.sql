@@ -13,8 +13,10 @@ select  jp.job_id,
         jp.job_no_degree_mention,
         jp.salary_year_avg
 from job_postings_fact as jp
-where jp.salary_year_avg is not NULL
+where jp.salary_year_avg is not NULL and
+        job_title_short = 'Data Analyst'
 ORDER BY jp.salary_year_avg DESC LIMIT(10);
+
 
 
 
