@@ -95,7 +95,7 @@ where salary_year_avg<50000 and salary_year_avg>500000;
 --soal 10--
 --tampilkan gaji yang gajinya diatas rata2 yaitu=123.326--
 select avg(salary_year_avg)as new_value from job_postings_fact;
-pragma table_info(job_postings_fact); --memanggil seluruh tabel di database--
+pragma table_info(job_postings_fact); --memanggil seluruh kolom di database--
 select job_title_short,
 job_title,
 job_location,
@@ -170,4 +170,5 @@ select job_title_short, job_posted_date,
            CAST ((strftime('%y', 'now') - strftime('%y', date(job_posted_date))) as integer) -
            (strftime('%m-%d', 'now') < strftime('%m-%d', date(job_posted_date))) as waktu_posting from job_postings_fact;
            
+
 select job_posted_date, strftime('%y', job_posted_date) as tahun from job_postings_fact; --Tahunnya NULL brarti format datenya salah ga sesuai basis--
