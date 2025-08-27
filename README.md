@@ -21,6 +21,20 @@ For practice this into the data analyst job market, I utilize of several tools:
 
 # The Analysis
 Here's the answer to each question💡
+1. Top-paying data analyst jobs
+What we get from the analyst:
+- Range gaji sangat tinggi, gaji tertinggi $650.000 dan terendah around $185.000: Menunjukkan bahwa top salary untuk roles Data Analyst sangat bervariasi
+- Semakin senior atau managerial title job, maka semakin tinggi gajinya, contoh:
+"Sr Data Analyst", "Head of Infrastructure Management & Data Analystics", and "Director of Safety Data Analysis"
+- Job Data Analyst sering muncul di portal job seeker "Ladders" untuk posisi dengan salary tinggi.
+- Insight: portal job tertentu bisa jadi lebih fokus pada high paying atau senior roles.
 
+2. Skills are required for these top-paying jobs
+
+3. Skills are most in demand for data analysts
+
+4. Skills are associated with higher salaries
+
+5. The most optimal skills to learn
 
 
