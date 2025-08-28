@@ -58,7 +58,9 @@ What we get from the analyst:
 - Insight: Not all high-paying skills are in high demand. If you're looking for a learning strategy, it's best to choose skills that balance demand and salary (e.g., PyTorch, TensorFlow).
 
 # Conclusions
-📚 Used to and increasingly understand data aggregation which requires the use of the Group By () command after there is COUNT() and AVG() in the select section, they are my partners during the analysis.
+Throughout this experience, I’ve boosted my SQL skills with some serious advancements:
+- 📚 Used to and increasingly understand **Data Aggregation** which requires the use of the Group By () command after there is COUNT() and AVG() in the select section, they are partners during the analysis.
+- 🔓 Mastered advanced SQL tricks, joining tables effortlessly and using **WITH from CTE** for sleek temporary table hacks.
 
 # Closing Thoughts and What I Learned
 The analysis of the 2023 job postings data has been completed✨. I had forgotten my SQL skills and because of somethings, so I started to withdraw myself back to learning this and I found more life and having a pleasant feeling in the process of learning this skill. The author found it very informative/insightful, revealing many previously unknown tools. Hopefully, this analysis will help others learn about analysis and SQL🌷.
