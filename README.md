@@ -2,7 +2,7 @@
 🎨Exploring the Job Market Data. Focusing on data analyst roles, this project explores top-paying jobs, in-demand skills, and where high demand meets high salary in the field of data analytics.
 
 # Background
-This dataset from a data-focused YouTuber discussing the job market. This project was born out of desire to showcase which jobs offer higher salaries and which positions are most in demand.
+This project was born out of desire to showcase which jobs offer higher salaries and which positions are most in demand.
 
 The data comes from [Lukebarousse.com](https://www.youtube.com/@LukeBarousse), whose explanations are easy for me to understand. Thanks to that✨, I was able to complete about half of this project🎀.
 
@@ -32,35 +32,37 @@ What we got from the analyst:
 
 2. Skills are required for these top-paying jobs
 What we get from the analyst:
-Terlihat bahwa terdapat skill baru/niche, skill dasar tetap jadi fondasi yang wajib seperti SQL, Python, R yang menjadi top 3 skill yang dibutuhkan berdasarkan top paying
+It can be seen that there are new/niche skills, basic skills remain a mandatory foundation such as SQL, Python, R which are the top 3 skills needed based on the highest paying.
 
 3. Skills are most in demand for data analysts
 What we get from the analyst:
-- Hasil dari analisis skill apa yang paling dibutuhkan untuk roles Data Analyst, terlihat SQL menempati posisi teratas (92.628 kali disebut), Excel (67.031), Python (57.326), Tableau (46.554), dan Power BI (39.468).
-- Which is means SQL dan Excel masih menjadi fondasi utama kebutuhan yang harus dimiliki seorang Data Analyst.
-- Terlihat bahwa 10 top skills terkait langsung dengan data management dan visualisasi.
-- Sedangkan Python mendukung automation, Tableau dan Power BI kebutuhan visualisasi dimana perusahaan butuh kemampuan reporting dan dashboarding selain coding.
-- Ada jarak besar antara SQL (92k) dan Power BI (39k) → menandakan core skill database & coding jauh lebih wajib ketimbang tools tambahan.
+- The analysis of the most needed skills for Data Analyst roles shows that SQL tops the list (92.628 mentions), followed by Excel (67.031), Python (57.326), Tableau (46.554), and Power BI (39.468).
+- This means that SQL and Excel remain the primary foundational skills required for a Data Analyst.
+- The top 10 skills are directly related to data management and visualization.
+- While Python supports automation, Tableau and Power BI support visualization needs, requiring companies to utilize reporting and dashboarding capabilities in addition to coding.
+- There is a significant gap between SQL (92k) and Power BI (39k), indicating that core database and coding skills are far more essential than additional tools.
 
 4. Skills are associated with higher salaries
-- Skill dengan gaji tertinggi itu ada SVN dengan rata-rata gajinya paling tinggi ($400.000) disusul oleh solidity ($179.000), dan Golang ($155.000).
-- Menunjukkan bahwa semakin spesialis skill, maka semakin tinggi potensi gaji dibanding skill yang lebih umum.
-- Terdapat gap gaji yang cukup jauh dari $400K (SVN) hingga sekitar $138K (Perl) yang mana artinya skill yang dikuasai bisa sangat mempengaruhi potensi gaji.
+- The highest-paying skill is SVN, with the highest average salary ($400.000), followed by Solidity ($179.000), and Golang ($155.000).
+- This shows that the more specialized the skill, the higher the salary potential compared to more general skills.
+- There is a significant salary gap, from $400.000 (SVN) to around $138.000 (Perl), which means that the skills mastered can significantly impact salary potential.
 
 5. The most optimal skills to learn
-- disini aku mencoba menggali 10 skill yang wajib dipelajari berdasarkan banyaknya kebutuhan dan salary:
-  * Kafka → demand 40, salary ~129K (paling tinggi salary di list ini).
-  * PyTorch → demand 20, salary ~125K.
-  * TensorFlow → demand 24, salary ~120K.
-  * Ini menunjukkan bahwa AI/ML frameworks (PyTorch, TensorFlow) serta big data streaming (Kafka) sangat penting untuk dipelajari.
-- Diantara 10 skills tersebut masih ada niche yang memiliki gaji tinggi yaitu Perl = demand 20 dengan salari $124K
-- Cassandra → demand 11, salary ~118k. Masih penting untuk role yang berhubungan dengan distributed systems & database skala besar.
-- Insight: Tidak semua skill dengan salary tinggi punya demand tinggi. Kalau mau strategi belajar, sebaiknya pilih skill yang balance antara demand & salary (contoh: PyTorch, TensorFlow).
+- Here, I'll explore 10 must-learn skills based on demand and salary:
+  * Kafka → demand 40, salary=$129.000 (the highest salary on this list).
+  * PyTorch → demand 20, salary=$125.000.
+  * TensorFlow → demand 24, salary=$120.000.
+  * This shows that AI/ML frameworks (PyTorch, TensorFlow) and big data streaming (Kafka) are very important to learn.
+- Among these 10 skills, there are still niche skills with high salaries: Perl = demand 20 with a salary of $124.000.
+- Cassandra → demand 11, salary $118.000. Still important for roles related to distributed systems and large-scale databases.
+- Insight: Not all high-paying skills are in high demand. If you're looking for a learning strategy, it's best to choose skills that balance demand and salary (e.g., PyTorch, TensorFlow).
 
 # Conclusions
+📚 Used to and increasingly understand data aggregation which requires the use of the Group By () command after there is COUNT() and AVG() in the select section, they are my partners during the analysis.
 
 # Closing Thoughts and What I Learned
 The analysis of the 2023 job postings data has been completed✨. I had forgotten my SQL skills and because of somethings, so I started to withdraw myself back to learning this and I found more life and having a pleasant feeling in the process of learning this skill. The author found it very informative/insightful, revealing many previously unknown tools. Hopefully, this analysis will help others learn about analysis and SQL🌷.
+
 
 
 
