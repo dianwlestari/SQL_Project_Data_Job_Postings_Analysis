@@ -18,6 +18,7 @@ For practice this into the data analyst job market, I utilize of several tools:
 * Visual Studio Code: for executing SQL queries.
 * PostgreSQL: for database management system
 * Git & GitHub: for control and sharing my SQL script and analysis.
+* Visualization: Microsoft Excel.
 
 # The Analysis
 Here's the answer to each question💡
@@ -42,7 +43,15 @@ What we get from the analyst:
 - Ada jarak besar antara SQL (92k) dan Power BI (39k) → menandakan core skill database & coding jauh lebih wajib ketimbang tools tambahan.
 
 4. Skills are associated with higher salaries
+- Skill dengan gaji tertinggi itu ada SVN dengan rata-rata gajinya paling tinggi ($400.000) disusul oleh solidity ($179.000), dan Golang ($155.000).
+- Menunjukkan bahwa semakin spesialis skill, maka semakin tinggi potensi gaji dibanding skill yang lebih umum.
+- Terdapat gap gaji yang cukup jauh dari $400K (SVN) hingga sekitar $138K (Perl) yang mana artinya skill yang dikuasai bisa sangat mempengaruhi potensi gaji.
 
 5. The most optimal skills to learn
+- disini aku mencoba menggali 10 skill yang wajib dipelajari berdasarkan banyaknya kebutuhan dan salary:
+  * Kafka → demand 40, salary ~129k (paling tinggi salary di list ini).
+  * PyTorch → demand 20, salary ~125k.
+  * TensorFlow → demand 24, salary ~120k.
+→ Ini menunjukkan bahwa AI/ML frameworks (PyTorch, TensorFlow) serta big data streaming (Kafka) sangat berharga untuk dipelajari.
 
 
