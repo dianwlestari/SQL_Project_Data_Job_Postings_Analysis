@@ -22,16 +22,24 @@ For practice this into the data analyst job market, I utilize of several tools:
 # The Analysis
 Here's the answer to each question💡
 1. Top-paying data analyst jobs
-What we get from the analyst:
-- Range gaji sangat tinggi, gaji tertinggi $650.000 dan terendah around $185.000: Menunjukkan bahwa top salary untuk roles Data Analyst sangat bervariasi
-- Semakin senior atau managerial title job, maka semakin tinggi gajinya, contoh:
-"Sr Data Analyst", "Head of Infrastructure Management & Data Analystics", and "Director of Safety Data Analysis"
-- Job Data Analyst sering muncul di portal job seeker "Ladders" untuk posisi dengan salary tinggi.
-- Insight: portal job tertentu bisa jadi lebih fokus pada high paying atau senior roles.
+What we got from the analyst:
+- The salary range is very high, the highest salary is $650.000 and the lowest is around $185.000: Shows that the top salary for Data Analyst roles varies greatly.
+- The more senior or managerial the job title, the higher the salary, for example:
+"Sr Data Analyst", "Head of Infrastructure Management & Data Analystics", and "Director of Safety Data Analysis".
+- Job Data Analyst often appears on the job seeker portal "Ladders" for positions with high salaries.
+- Insight: certain job portals may focus more on high paying or senior roles.
 
 2. Skills are required for these top-paying jobs
+What we get from the analyst:
+Terlihat bahwa terdapat skill baru/niche, skill dasar tetap jadi fondasi yang wajib seperti SQL, Python, R yang menjadi top 3 skill yang dibutuhkan berdasarkan top paying
 
 3. Skills are most in demand for data analysts
+What we get from the analyst:
+- Hasil dari analisis skill apa yang paling dibutuhkan untuk roles Data Analyst, terlihat SQL menempati posisi teratas (92.628 kali disebut), Excel (67.031), Python (57.326), Tableau (46.554), dan Power BI (39.468).
+- Which is means SQL dan Excel masih menjadi fondasi utama kebutuhan yang harus dimiliki seorang Data Analyst.
+- Terlihat bahwa 10 top skills terkait langsung dengan data management dan visualisasi.
+- Sedangkan Python mendukung automation, Tableau dan Power BI kebutuhan visualisasi dimana perusahaan butuh kemampuan reporting dan dashboarding selain coding.
+- Ada jarak besar antara SQL (92k) dan Power BI (39k) → menandakan core skill database & coding jauh lebih wajib ketimbang tools tambahan.
 
 4. Skills are associated with higher salaries
 
