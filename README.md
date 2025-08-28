@@ -49,9 +49,19 @@ What we get from the analyst:
 
 5. The most optimal skills to learn
 - disini aku mencoba menggali 10 skill yang wajib dipelajari berdasarkan banyaknya kebutuhan dan salary:
-  * Kafka → demand 40, salary ~129k (paling tinggi salary di list ini).
-  * PyTorch → demand 20, salary ~125k.
-  * TensorFlow → demand 24, salary ~120k.
-→ Ini menunjukkan bahwa AI/ML frameworks (PyTorch, TensorFlow) serta big data streaming (Kafka) sangat berharga untuk dipelajari.
+  * Kafka → demand 40, salary ~129K (paling tinggi salary di list ini).
+  * PyTorch → demand 20, salary ~125K.
+  * TensorFlow → demand 24, salary ~120K.
+  * Ini menunjukkan bahwa AI/ML frameworks (PyTorch, TensorFlow) serta big data streaming (Kafka) sangat penting untuk dipelajari.
+- Diantara 10 skills tersebut masih ada niche yang memiliki gaji tinggi yaitu Perl = demand 20 dengan salari $124K
+- Cassandra → demand 11, salary ~118k. Masih penting untuk role yang berhubungan dengan distributed systems & database skala besar.
+- Insight: Tidak semua skill dengan salary tinggi punya demand tinggi. Kalau mau strategi belajar, sebaiknya pilih skill yang balance antara demand & salary (contoh: PyTorch, TensorFlow).
+
+# Conclusions
+
+# Closing Thoughts and What I Learned
+The analysis of the 2023 job postings data has been completed✨. I had forgotten my SQL skills and because of somethings, so I started to withdraw myself back to learning this and I found more life and having a pleasant feeling in the process of learning this skill. The author found it very informative/insightful, revealing many previously unknown tools. Hopefully, this analysis will help others learn about analysis and SQL🌷.
+
+
 
 
