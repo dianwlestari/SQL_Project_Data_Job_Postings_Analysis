@@ -4,7 +4,7 @@
 # Background
 This project was born out of desire to showcase which jobs offer higher salaries and which positions are most in demand.
 
-The data comes from [Lukebarousse.com](https://www.youtube.com/@LukeBarousse), whose explanations are easy for me to understand. Thanks to that✨, I was able to complete about half of this project🎀.
+The data comes from [Lukebarousse.com](https://www.youtube.com/@LukeBarousse), whose explanations are easy for me to understand. Thanks to that✨, I was able to complete about this project🎀.
 
 💡The questions I aimed to answer through these SQL queries were:
 1. What are the top-paying data analyst jobs?
