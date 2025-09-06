@@ -22,7 +22,8 @@ For practice this into the data analyst job market, I utilize of several tools:
 
 # The Analysis
 Here's the answer to each question💡
-1. Top-paying data analyst jobs
+
+**1. Top-paying data analyst jobs**
 ```sql
 select  jp.job_id,
             jp.job_title,
@@ -43,7 +44,7 @@ What we got from the analyst:
 - Job Data Analyst often appears on the job seeker portal "Ladders" for positions with high salaries.
 - Insight: certain job portals may focus more on high paying or senior roles.
 
-2. Skills are required for these top-paying jobs
+**2. Skills are required for these top-paying jobs**
 ```sql
 with job_top_paying as (
     select  jp.job_id,
@@ -68,11 +69,10 @@ ORDER BY job_top_paying.salary_year_avg DESC;
 <img width="259" height="309" alt="image" src="https://github.com/user-attachments/assets/ff513c13-7989-4b1e-967e-2fd286a77378" />
 </div>
 What we get from the analyst:
-It can be seen that there are new/niche skills, basic skills remain a mandatory foundation such as SQL, Python, R which are the top 3 skills needed based on the highest paying.
+It can be seen that there are new/niche skills, basic skills remain a mandatory foundation such as SQL, Python, R which are the top 3 skills needed based on the highest paying. 
+<br> </br>
 
-
-
-3. Skills are most in demand for data analysts
+**3. Skills are most in demand for data analysts**
 ```sql
 with job_data_analyst as (
     select job_title_short, job_id 
@@ -98,7 +98,7 @@ What we get from the analyst:
 - While Python supports automation, Tableau and Power BI support visualization needs, requiring companies to utilize reporting and dashboarding capabilities in addition to coding.
 - There is a significant gap between SQL (92k) and Power BI (39k), indicating that core database and coding skills are far more essential than additional tools.
 
-4. Skills are associated with higher salaries
+**4. Skills are associated with higher salaries**
 <div align="center">
 <img width="376" height="309" alt="image" src="https://github.com/user-attachments/assets/b414ea89-14df-4b87-a77d-5e72704149a1" />
 </div>
@@ -119,7 +119,7 @@ What we got:
 - This shows that the more specialized the skill, the higher the salary potential compared to more general skills.
 - There is a significant salary gap, from $400.000 (SVN) to around $138.000 (Perl), which means that the skills mastered can significantly impact salary potential.
 
-5. The most optimal skills to learn
+**5. The most optimal skills to learn**
 ```sql
 select  skills_dim.skill_id,
         skills_dim.skills,
@@ -147,7 +147,7 @@ Output:
   * This shows that AI/ML frameworks (PyTorch, TensorFlow) and big data streaming (Kafka) are very important to learn.
 - Among these 10 skills, there are still niche skills with high salaries: Perl = demand 20 with a salary of $124.000.
 - Cassandra → demand 11, salary $118.000. Still important for roles related to distributed systems and large-scale databases.
-- Insight: Not all high-paying skills are in high demand. If you're looking for a learning strategy, it's best to choose skills that balance demand and salary (e.g., PyTorch, TensorFlow).
+- Insight: Not all high-paying skills are in high demand. If you're looking for a learning strategy, it's best to choose skills that balance demand and salary (e.g., PyTorch and TensorFlow).
 
 # Conclusions
 Throughout this experience, I’ve boosted my SQL skills with some serious advancements:
