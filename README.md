@@ -34,6 +34,7 @@ select  jp.job_id,
             job_title_short = 'Data Analyst'
     ORDER BY jp.salary_year_avg DESC LIMIT(10);
 ```
+<img width="1130" height="540" alt="image" src="https://github.com/user-attachments/assets/eb9f1ca1-abc9-40e5-a6ef-822a91c23253" />
 
 What we got from the analyst:
 - The salary range is very high, the highest salary is $650.000 and the lowest is around $185.000: Shows that the top salary for Data Analyst roles varies greatly.
@@ -63,9 +64,13 @@ INNER JOIN skills_job_dim on job_top_paying.job_id = skills_job_dim.job_id
 INNER JOIN skills_dim on skills_job_dim.skill_id = skills_dim.skill_id
 ORDER BY job_top_paying.salary_year_avg DESC;
 ```
-
+<div align="center">
+<img width="259" height="309" alt="image" src="https://github.com/user-attachments/assets/ff513c13-7989-4b1e-967e-2fd286a77378" />
+</div>
 What we get from the analyst:
 It can be seen that there are new/niche skills, basic skills remain a mandatory foundation such as SQL, Python, R which are the top 3 skills needed based on the highest paying.
+
+
 
 3. Skills are most in demand for data analysts
 ```sql
@@ -84,6 +89,7 @@ group by skills_dim.skills
 order by skills_count desc limit(10);
 --there is alternatif command for this case, see it at SQL script for more detail
 ```
+<img width="1107" height="624" alt="image" src="https://github.com/user-attachments/assets/d68b5dc7-7ac4-4d39-af3a-8d944d9eebb0" />
 
 What we get from the analyst:
 - The analysis of the most needed skills for Data Analyst roles shows that SQL tops the list (92.628 mentions), followed by Excel (67.031), Python (57.326), Tableau (46.554), and Power BI (39.468).
@@ -93,6 +99,12 @@ What we get from the analyst:
 - There is a significant gap between SQL (92k) and Power BI (39k), indicating that core database and coding skills are far more essential than additional tools.
 
 4. Skills are associated with higher salaries
+<div align="center">
+<img width="376" height="309" alt="image" src="https://github.com/user-attachments/assets/b414ea89-14df-4b87-a77d-5e72704149a1" />
+</div>
+
+The command are:
+
 ```sql
 select skills, round(avg (salary_year_avg), 0) as salary_average
 from job_postings_fact 
@@ -123,6 +135,10 @@ having count(skills_job_dim.skill_id) > 10
 ORDER BY salary DESC, demand DESC
 LIMIT (10);
 ```
+Output:
+<div align="center">
+<img width="352" height="309" alt="image" src="https://github.com/user-attachments/assets/fef3804e-e928-4fe1-b276-a6b122fa0cb4" />
+</div>
 
 - Here, I'll explore 10 must-learn skills based on demand and salary:
   * Kafka → demand 40, salary=$129.000 (the highest salary on this list).
