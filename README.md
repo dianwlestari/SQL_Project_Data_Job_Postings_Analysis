@@ -72,7 +72,7 @@ What we get from the analyst:
 It can be seen that there are new/niche skills, basic skills remain a mandatory foundation such as SQL, Python, R which are the top 3 skills needed based on the highest paying. 
 <br> </br>
 
-**3. Skills are most in demand for data analysts**
+**3. Skills are most in demand for data analyst**
 ```sql
 with job_data_analyst as (
     select job_title_short, job_id 
